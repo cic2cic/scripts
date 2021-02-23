@@ -1,2 +1,2 @@
 # scripts
-raccolta scripts installazione debian linux raspberry
+raccolta vari scripts per debian linux raspberry
