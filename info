@@ -1,0 +1,14 @@
+#! /bin/bash
+
+echo $(ifconfig | grep broadcast | awk '{print $2 $9}')
+echo $(vcgencmd measure_temp)
+echo SSH Status: $(service ssh status | grep active | awk '{print $2 $3}')
+
+# sudo apt update
+# sudo apt full-upgrade
+# https://pimylifeup.com/raspberry-pi-disable-wifi/
+# sudo apt install rfkill
+# sudo rfkill block wifi
+# sudo rfkill block bluetooth
+# sudo rfkill unblock wifi
+# sudo apt install speedtest-cli
