@@ -1,8 +1,11 @@
 #! /bin/bash
 
-echo $(ifconfig | grep broadcast | awk '{print $2 $9}')
+echo IP $(ifconfig | grep broadcast | awk '{print $2}')
 echo $(vcgencmd measure_temp)
 echo SSH Status: $(service ssh status | grep active | awk '{print $2 $3}')
+echo Hostname: $(hostname);
+echo $(sudo speedtest-cli);
+
 
 # sudo apt update
 # sudo apt full-upgrade
