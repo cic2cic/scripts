@@ -1,10 +1,19 @@
 #! /bin/bash
 
+echo Path Bash: $(which bash)
 echo IP $(ifconfig | grep broadcast | awk '{print $2}')
 echo $(vcgencmd measure_temp)
 echo SSH Status: $(service ssh status | grep active | awk '{print $2 $3}')
 echo Hostname: $(hostname);
-echo $(sudo speedtest-cli);
+echo "Dai invio per fare speedtest, se non vuoi scrivi NO"
+read answer
+if [ $answer ]; then
+    echo ok
+else
+     echo $(sudo speedtest-cli);
+fi
+
+
 
 
 # sudo apt update
