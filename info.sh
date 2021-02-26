@@ -23,4 +23,4 @@ fi
 # sudo rfkill block wifi
 # sudo rfkill block bluetooth
 # sudo rfkill unblock wifi
-# sudo apt install speedtest-cli
+# sudo apt-get install speedtest
